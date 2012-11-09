@@ -1,5 +1,11 @@
-libobjc4 (1.6.1-1) unstable; urgency=low
+libobjc4 (1.6.1-0.0~upfmipal1) precise; urgency=low
 
-  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+  * Rebuild with support for libdispatch.
 
- -- vagrant <vagrant@unknown>  Thu, 08 Nov 2012 12:06:32 +0000
+ -- Esteve Fernandez <esteve@apache.org>  Fri, 09 Nov 2012 13:34:25 +0000
+
+libobjc4 (1.6.1-0) unstable; urgency=low
+
+  * Initial release.
+
+ -- Esteve Fernandez <esteve@apache.org>  Thu, 08 Nov 2012 12:06:32 +0000
