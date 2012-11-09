@@ -1,0 +1,21 @@
+Source: libobjc4
+Priority: extra
+Maintainer: Esteve Fernandez <esteve@apache.org>
+Build-Depends: debhelper (>= 8.0.0), clang, libdispatch-dev
+Standards-Version: 3.9.2
+Section: libs
+
+Package: libobjc4-dev
+Section: libdevel
+Architecture: any
+Depends: libobjc4 (= ${binary:Version})
+Description: Runtime library for GNU Objective-C applications
+ Library needed for GNU ObjC applications linked against the shared library.
+
+Package: libobjc4
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Conflicts: libobjc2, gobjc
+Description: GNU Objective-C runtime library development files
+ Development files for the GNU ObjC runtime library.
