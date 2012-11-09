@@ -1,0 +1,26 @@
+Index: libobjc2/objcxx_eh.cc
+===================================================================
+--- libobjc2.orig/objcxx_eh.cc	2012-11-09 09:52:24.886611669 +0000
++++ libobjc2/objcxx_eh.cc	2012-11-09 10:18:57.480449187 +0000
+@@ -15,6 +15,13 @@
+ 
+ using __cxxabiv1::__class_type_info;
+ 
++/* If the typeinfo exists, use that instead of reimplement it here. */
++#if !defined(__has_include)
++#define __has_include(x) 0
++#endif
++#if __has_include(<typeinfo>)
++#       include <typeinfo>
++#else
+ namespace std
+ {
+ 	/**
+@@ -48,6 +55,7 @@
+ 				                void **thrown_object) const;
+ 	};
+ }
++#endif
+ 
+ using namespace std;
+ 
